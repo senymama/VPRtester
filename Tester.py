@@ -1,4 +1,5 @@
-try:
+# try:
+if True:
     from win.reder import red
     from tkinter import *
     from tkinter import filedialog as fd
@@ -25,28 +26,28 @@ try:
             win.iconbitmap("icon.ico")
             win.withdraw
             mb.showerror('Ошибочка вышла', 'Данный тест повреждён или составлен неверно, попробуйте занаво')
-            exit()
+            exit(28)
             win.mainloop()
         if count == 0:
             win = Tk()
             win.iconbitmap("icon.ico")
             win.withdraw
             mb.showerror('Ошибочка вышла', 'Данный тест пустой')
-            exit()
+            exit(35)
             win.mainloop()
         elif count <= 0:
             win = Tk()
             win.iconbitmap("icon.ico")
             win.withdraw
             mb.showerror('Ошибочка вышла', 'Данный тест повреждён или составлен неверно, попробуйте занаво')
-            exit()
+            exit(42)
             win.mainloop()
         elif count > 20:
             win = Tk()
             win.iconbitmap("icon.ico")
             win.withdraw
             mb.showerror('Ошибочка вышла', 'Данный тест слишком большой или произошла ошибка, попробуйте занаво')
-            exit()
+            exit(49)
             win.mainloop()
         else:
             flag_c = 0
@@ -66,7 +67,7 @@ try:
                         win.iconbitmap("icon.ico")
                         win.withdraw
                         mb.showerror('Ошибочка вышла', 'Данный тест повреждён или составлен неверно, попробуйте занаво')
-                        exit()
+                        exit(69)
                         win.mainloop()
 
                     red.answerfill(number, name, a1, a2, a3, a4)
@@ -74,14 +75,14 @@ try:
                         if red.var == c:
                             flag_c += 1
                     except:
-                        exit()
+                        exit(77)
 
                 except:
                     win = Tk()
                     win.iconbitmap("icon.ico")
                     win.withdraw()
                     mb.showerror('Ошибочка вышла', 'Данный тест повреждён или составлен неверно, попробуйте занав  о')
-                    exit()
+                    exit(84)
                     win.mainloop()
             if flag_c < (count // 2):
                 res = 'полхой'
@@ -104,16 +105,16 @@ try:
         win.withdraw()
         mb.showerror('Ошибочка вышла', 'не удалось открыть тест или в программе произашла ошибка попробуйте заново')
         win.mainloop()
-        exit()
+        exit(107)
     win = Tk()
     win.iconbitmap("icon.ico")
     win.destroy()
     win.mainloop()
 
-except:
-    win = Tk()
-    win.iconbitmap("icon.ico")
-    win.withdraw()
-    mb.showerror('Ошибочка вышла', 'в программе произашла ошибка попробуйте заново')
-    exit()
-    win.mainloop()
+# except:
+#     win = Tk()
+#     win.iconbitmap("icon.ico")
+#     win.withdraw()
+#     mb.showerror('Ошибочка вышла', 'в программе произашла ошибка попробуйте заново')
+#     exit(118)
+#     win.mainloop()
