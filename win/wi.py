@@ -64,7 +64,16 @@ class entrys:
                 var.set(0)
                 entrys.destroy(win)
             else:
-                mb.showwarning('Ошибочка вышла', "вы ничего не ввели")
+                if a1 == '' and a2 == "" and a3 == '' and a4 == '' and name == '' and c == 0:
+                    mb.showwarning('Ошибочка вышла', "Обязательно заполнить все поля")
+                elif a1 == "" or a2 == '' or a3 == "" or a4 == "":
+                    mb.showerror('Ошибочка вышла', "Обязательно заполнить все поля для ответов")
+                elif name == "":
+                    mb.showwarning('Ошибочка вышла', "Обязательно заполнить поле для вопроса")
+                elif c == '' or c == 0:
+                    mb.showwarning('Ошибочка вышла', "Вы не выбрали правильный ответ")
+                else:
+                    mb.showwarning('Ошибочка вышла', "вы ничего не ввели")
 
         a1, a2, a3, a4, name = '', '', '', '', ''
         c = 0

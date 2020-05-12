@@ -76,16 +76,11 @@ class red:
         win.bind()
         win.mainloop()
     def chois(title='Поле выбора', width=30, bd=2, state='normal'):
-        def retern():
-            chois = var.get()
-            print(chois)
-
+        def retern(chois):
             if chois == '' or chois == 0:
                 mb.showwarning('Ошибочка вышла', "вы ничего не ввели")
             elif chois == 'o' or chois == 'c' or chois == 'e':
-                if chois == 'e':
-                    exit()
-                elif chois == 'c':
+                if chois == 'c':
                     win.destroy()
                     red.showenty()
                     red.c = red.text
@@ -103,13 +98,15 @@ class red:
         win = Tk()
         win.iconbitmap("icon.ico")
         win.title(title)
-        var = StringVar()
-        var.set(5)
-        r1 = Radiobutton(text="o", variable=var, value='o', command=retern).grid(row=0, column=1, sticky='w')
-        r2 = Radiobutton(text="c", variable=var, value='c', command=retern).grid(row=1, column=1, sticky='w')
-        r3 = Radiobutton(text="e", variable=var, value='e', command=retern).grid(row=2, column=1, sticky='w')
-        Label(text='Если вы хотите открыть тест нажмите o').grid(row=0)
-        Label(text='Если вы хотите вставить код текста нажмите c').grid(row=1)
-        Label(text='Если ван надо выключить программу нажмите e').grid(row=2)
+        # var = StringVar()
+        # var.set(5)
+        # r1 = Radiobutton(text="", variable=var, value='o', command=retern).grid(row=0, column=1, sticky='w')
+        # r2 = Radiobutton(text="", variable=var, value='c', command=retern).grid(row=1, column=1, sticky='w')
+        # r3 = Radiobutton(text="", variable=var, value='e', command=retern).grid(row=2, column=1, sticky='w')
+        # Label(text='Если вы хотите открыть тест нажмите').grid(row=0)
+        # Label(text='Если вы хотите вставить код текста нажмите').grid(row=1)
+        # Label(text='Если ван надо выключить программу нажмите').grid(row=2)
+        Button(text='открыть тест', font=('Modern', '13'), command=lambda:retern('o')).grid(row=0, padx=2, pady=2)
+        Button(text='вставить код', font=('Modern', '13'), command=lambda:retern('c')).grid(row=1, padx=2, pady=2)
         win.bind()
         win.mainloop()

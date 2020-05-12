@@ -1,5 +1,5 @@
-# try:
-if True:
+try:
+# if True:
     from win.reder import red
     from tkinter import *
     from tkinter import filedialog as fd
@@ -111,10 +111,10 @@ if True:
     win.destroy()
     win.mainloop()
 
-# except:
-#     win = Tk()
-#     win.iconbitmap("icon.ico")
-#     win.withdraw()
-#     mb.showerror('Ошибочка вышла', 'в программе произашла ошибка попробуйте заново')
-#     exit(118)
-#     win.mainloop()
+except:
+    win = Tk()
+    win.iconbitmap("icon.ico")
+    win.withdraw()
+    mb.showerror('Ошибочка вышла', 'в программе произашла ошибка попробуйте заново')
+    exit(118)
+    win.mainloop()

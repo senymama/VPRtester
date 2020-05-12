@@ -33,7 +33,7 @@ if True:
             print(ans)
         except:
             win = Tk()
-            win.withdraw
+            win.withdraw()
             win.iconbitmap("icon.ico")
             mb.showerror('Ошибочка вышла', 'Произошла ошибка, попробуйте заново')
             exit()
@@ -46,7 +46,8 @@ if True:
     for i in range(1, (ans+1)):
         print(i)
         entrys.qest(i)
-
+        if entrys.qestion == []:
+            exit()
         qestions.append(entrys.qestion)
     print(qestions)
 
@@ -54,6 +55,6 @@ if True:
     win.withdraw()
     win.iconbitmap("icon.ico")
     extractText()
-    mb.showinfo('Инфо для пользователя', 'Сохраненно успешно')
+    # mb.showinfo('Инфо для пользователя', 'Сохраненно успешно')
 # except:
 #     mb.showerror('Ошибочка вышла', 'В программе произошла ошибка попробуйте заново')
